@@ -1,0 +1,22 @@
+{{> header }}
+
+<div id="main" class="flow-text card">
+
+    <style>
+     #main {
+	 z-index: 999;
+	 background: rgba(24, 24, 24, 0.5);
+	 padding: 50px;
+     }
+    </style>
+
+  {{{programs}}}
+
+    
+    <div id="repositories" class="collection"></div>
+
+    <script src="/programs/getRepositories.js"></script>
+    
+</div>
+
+{{> footer }}

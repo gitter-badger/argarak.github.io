@@ -1,0 +1,11 @@
+{{> header }}
+		<div class="flow-text" id="main" role="main">
+		{{#is_post}}
+			{{> post}}
+		{{/is_post}}
+		
+		{{^is_post}}
+			{{> archive}}
+		{{/is_post}}
+    		</div>
+{{> footer }}

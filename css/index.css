@@ -1,0 +1,262 @@
+/* Copyright 2016 Jakub KukieÅka */
+
+/* Licensed under the Apache License, Version 2.0 (the "License"); */
+/* you may not use this file except in compliance with the License. */
+/* You may obtain a copy of the License at */
+
+/*     http://www.apache.org/licenses/LICENSE-2.0 */
+
+/* Unless required by applicable law or agreed to in writing, software */
+/* distributed under the License is distributed on an "AS IS" BASIS, */
+/* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. */
+/* See the License for the specific language governing permissions and */
+/* limitations under the License. */
+
+
+* {
+    outline: 0 !important;
+    color: #bbb;
+    font-family: "Raleway", sans-serif;
+}
+main {
+    margin-left: 90px;
+}
+
+#main {
+    margin: auto !important;
+    width: 70vw !important;
+}
+img {
+    padding: 5px !important;
+    border: 15px solid #2c2c2c !important;
+}
+.side-nav {
+    display: inline-flex;
+    padding: 21px !important;
+    width: 90px !important;
+    background: rgba(0, 0, 0, 0) !important;
+    flex-direction: column;
+    justify-content: center;
+}
+#top {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#111111+21,7db9e8+100&1+8,0+100 */
+    background: -moz-linear-gradient(top, rgba(17,17,17,1) 8%, rgba(17,17,17,0.86) 21%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(17,17,17,1) 8%,rgba(17,17,17,0.86) 21%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(17,17,17,1) 8%,rgba(17,17,17,0.86) 21%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#111111', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+    height: 120px;
+    z-index: -999;
+    margin-bottom: -50px !important;
+}
+#top-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background: rgba(0, 0, 0, 0) !important;
+    margin-left: -110px !important;
+}
+.search-icon {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+nav, .side-nav {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.16), 0px 0px 0px 0px rgba(0, 0, 0, 0.12) !important;
+}
+#nexus-svg {
+    width: 50px !important;
+    height: 57px !important;
+}
+img {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    margin: 40px auto;
+}
+#title {
+    margin-left: -90px;
+}
+#nav-li {
+    width: 0px !important;
+    height: 80px !important;
+    padding: 0 !important;
+}
+#no {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+li:hover {
+    background: rgba(0, 0, 0, 0) !important;
+}
+body {
+  background: #1a1a1a;
+}
+code * {
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif !important;
+}
+.progress {
+    position: fixed !important;
+    bottom: 0;
+    margin: 0 !important;
+}
+g path {
+    color: white !important;
+}
+
+.imageContainer {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+.imageContainer img {
+  margin-top: 10vh;
+  width: 15vw;
+  position: absolute;
+  left: 0;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.side-nav li span {
+    color: black;
+    opacity: 0;
+    position: fixed;
+    font-size: 30px;
+    padding: 20px 0px;
+    line-height: 10px;
+    text-align: center;
+    width: 0;
+    height: 48px;
+    transition: opacity .5s cubic-bezier(0,1,.72,.97), width .5s cubic-bezier(0,1,.72,.97);
+    left: 68px;
+    z-index: 999;
+}
+#home-span {
+    height: 57px;
+    line-height: 15px;
+}
+license {
+    position: fixed;
+    width: 100vw;
+    text-align: center;
+    font-size: 12px;
+    bottom: 0;
+    background: #000;
+}
+license i {
+    font-size: 15px !important;
+    margin-left: 20px;
+    text-align: left;
+}
+a {
+    color: red !important;
+}
+a#no {
+    display: inline-block;
+}
+
+.side-nav li, a {
+    z-index: 999;
+}
+
+/* .side-nav li a:hover span { */
+/*     transition: opacity .5s cubic-bezier(0,1,.72,.97), width .5s cubic-bezier(0,1,.72,.97); */
+/*     opacity: 1; */
+/*     width: 200px; */
+/* } */
+
+/* /\* repeated colors from 1 to 10 each hover color repeated after 10 menu items *\/ */
+/* .side-nav li:nth-child(10n+1) span, .side-nav li:nth-child(10n+1) a:hover svg { */
+/*   background-color: #8350DD; */
+/* } */
+/* .side-nav li:nth-child(10n+2) span, .side-nav li:nth-child(10n+2) a:hover svg { */
+/*   background-color: #4EC5DB; */
+/* } */
+/* .side-nav li:nth-child(10n+3) span, .side-nav li:nth-child(10n+3) a:hover svg { */
+/*   background-color: #3DC25D; */
+/* } */
+/* .side-nav li:nth-child(10n+4) span, .side-nav li:nth-child(10n+4) a:hover svg { */
+/*   background-color: #99BE24; */
+/* } */
+/* .side-nav li:nth-child(10n+5) span, .side-nav li:nth-child(10n+5) a:hover svg { */
+/*   background-color: #38c; */
+/* } */
+/* .side-nav li:nth-child(10n+6) span, .side-nav li:nth-child(10n+6) a:hover svg { */
+/*   background-color: #ff0000; */
+/* } */
+/* .side-nav li:nth-child(10n+7) span, .side-nav li:nth-child(10n+7) a:hover svg { */
+/*   background-color: #000; */
+/* } */
+/* .side-nav li:nth-child(10n+8) span, .side-nav li:nth-child(10n+8) a:hover svg { */
+/*   background-color: #F1A111; */
+/* } */
+/* .side-nav li:nth-child(10n+9) span, .side-nav li:nth-child(10n+9) a:hover svg { */
+/*   background-color: #777; */
+/* } */
+/* .side-nav li:nth-child(10n+10) span, .side-nav li:nth-child(10n+10) a:hover svg { */
+/*   background-color: #30555C; */
+/* 				     } */
+
+.entry-title span, time span, blacktext * {
+    color: black;
+}
+
+.entry-title span {
+    margin: 0 10px -10px 10px;
+    padding: 10px 0;
+    padding-right: 15vw;
+}
+
+time span {
+    margin: 0 10px;
+    padding: 10px 0;
+    margin-left: -5vw;
+    padding-left: 5vw;
+}
+
+.dateback {
+    margin: 0 5px;
+    padding: 5px 0;
+    margin-right: -5vw;
+    padding-right: 5vw;
+}
+
+.right-float {
+    float: right !important;
+}
+
+.btn-floating {
+    margin-top: 20px;
+}
+#search {
+    -webkit-transition: bottom 0.5s ease-in-out;
+    -moz-transition: bottom 0.5s ease-in-out;
+    -o-transition: bottom 0.5s ease-in-out;
+    -ms-transition: bottom 0.5s ease-in-out;
+    transition: bottom 0.5s ease-in-out;
+    position: fixed;
+    width: 100vw;
+    bottom: 0px;
+    left: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+.desc {
+    text-align: right;
+    color: #BBB;
+}
+.repo:hover {
+    background: #111 !important;
+}
+.repo {
+    background: #1c1c1c !important;
+}
