@@ -51,14 +51,15 @@ $(document).ready(function() {
 	}
     });
 
-    $("#search").slideUp();
+	// Search is broken currently, no point in even showing the bar
+    //$("#search").slideUp();
     
-    $('#search-icon').click(function() {
-	var search = $('#search');
+    //$('#search-icon').click(function() {
+	//var search = $('#search');
 	
-	search.is(":visible") ? search.slideUp() : search.slideDown(function() {
-	    search.find('input').focus();
-	});
-    });
+	//search.is(":visible") ? search.slideUp() : search.slideDown(function() {
+	//    search.find('input').focus();
+	//});
+    //});
 });
 
