@@ -21,7 +21,6 @@
 main {
     margin-left: 90px;
 }
-
 #main {
     margin: auto !important;
     width: 70vw !important;
@@ -34,26 +33,18 @@ img {
     display: inline-flex;
     padding: 21px !important;
     width: 90px !important;
-    background: rgba(0, 0, 0, 0) !important;
+    background: #111 !important;
     flex-direction: column;
     justify-content: center;
 }
-#top {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#111111+21,7db9e8+100&1+8,0+100 */
-    background: -moz-linear-gradient(top, rgba(17,17,17,1) 8%, rgba(17,17,17,0.86) 21%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(17,17,17,1) 8%,rgba(17,17,17,0.86) 21%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(17,17,17,1) 8%,rgba(17,17,17,0.86) 21%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#111111', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
-    height: 120px;
-    z-index: -999;
-    margin-bottom: -50px !important;
-}
 #top-nav {
     display: flex;
+    position: fixed;
     flex-direction: row;
     justify-content: flex-end;
     background: rgba(0, 0, 0, 0) !important;
-    margin-left: -110px !important;
+    right: 0;
+    height: 0px !important;
 }
 .search-icon {
   -webkit-transition: all 0.5s ease-in-out;
@@ -83,6 +74,7 @@ img {
     width: 0px !important;
     height: 80px !important;
     padding: 0 !important;
+    list-style-type: none !important;
 }
 #no {
     padding: 0 !important;
@@ -92,7 +84,7 @@ li:hover {
     background: rgba(0, 0, 0, 0) !important;
 }
 body {
-  background: #1a1a1a;
+  background: #111;
 }
 code * {
     font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif !important;
@@ -151,6 +143,7 @@ license {
     font-size: 12px;
     bottom: 0;
     background: #000;
+    z-index: 9999;
 }
 license i {
     font-size: 15px !important;
@@ -168,44 +161,11 @@ a#no {
     z-index: 999;
 }
 
-/* .side-nav li a:hover span { */
-/*     transition: opacity .5s cubic-bezier(0,1,.72,.97), width .5s cubic-bezier(0,1,.72,.97); */
-/*     opacity: 1; */
-/*     width: 200px; */
-/* } */
-
-/* /\* repeated colors from 1 to 10 each hover color repeated after 10 menu items *\/ */
-/* .side-nav li:nth-child(10n+1) span, .side-nav li:nth-child(10n+1) a:hover svg { */
-/*   background-color: #8350DD; */
-/* } */
-/* .side-nav li:nth-child(10n+2) span, .side-nav li:nth-child(10n+2) a:hover svg { */
-/*   background-color: #4EC5DB; */
-/* } */
-/* .side-nav li:nth-child(10n+3) span, .side-nav li:nth-child(10n+3) a:hover svg { */
-/*   background-color: #3DC25D; */
-/* } */
-/* .side-nav li:nth-child(10n+4) span, .side-nav li:nth-child(10n+4) a:hover svg { */
-/*   background-color: #99BE24; */
-/* } */
-/* .side-nav li:nth-child(10n+5) span, .side-nav li:nth-child(10n+5) a:hover svg { */
-/*   background-color: #38c; */
-/* } */
-/* .side-nav li:nth-child(10n+6) span, .side-nav li:nth-child(10n+6) a:hover svg { */
-/*   background-color: #ff0000; */
-/* } */
-/* .side-nav li:nth-child(10n+7) span, .side-nav li:nth-child(10n+7) a:hover svg { */
-/*   background-color: #000; */
-/* } */
-/* .side-nav li:nth-child(10n+8) span, .side-nav li:nth-child(10n+8) a:hover svg { */
-/*   background-color: #F1A111; */
-/* } */
-/* .side-nav li:nth-child(10n+9) span, .side-nav li:nth-child(10n+9) a:hover svg { */
-/*   background-color: #777; */
-/* } */
-/* .side-nav li:nth-child(10n+10) span, .side-nav li:nth-child(10n+10) a:hover svg { */
-/*   background-color: #30555C; */
-/* 				     } */
-
+.side-nav li a:hover span {
+    transition: opacity .5s cubic-bezier(0,1,.72,.97), width .5s cubic-bezier(0,1,.72,.97);
+    opacity: 1;
+    width: 200px;
+}
 .entry-title span, time span, blacktext * {
     color: black;
 }
@@ -254,9 +214,32 @@ time span {
     text-align: right;
     color: #BBB;
 }
-.repo:hover {
-    background: #111 !important;
+#main.actuated {
+    color: red !important;
 }
-.repo {
-    background: #1c1c1c !important;
+#btn-back {
+    display: flex;
+    flex-direction: column;
+    width: 82px !important;
+    margin-top: 95px !important;
+}
+#btn-back a {
+    margin: auto !important;
+}
+#search-icon {
+    padding: 0 25px;
+}
+.grid {
+    margin: auto;
+}
+.grid .card {
+    width: 300px;
+}
+.fork {
+    margin-bottom: 15px;
+}
+li {
+    list-style-type: disc !important;
+    color: #bbb;
+    line-height: 45px;
 }

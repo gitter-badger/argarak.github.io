@@ -1,3 +1,5 @@
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt
+
 /*!
  * JavaScript Cookie v2.1.0
  * https://github.com/js-cookie/js-cookie
@@ -5,6 +7,7 @@
  * Copyright 2006, 2015 Klaus Hartl & Fagner Brack
  * Released under the MIT license
  */
+
 (function (factory) {
 	if (typeof define === 'function' && define.amd) {
 		define(factory);
@@ -143,3 +146,5 @@
 
 	return init(function () {});
 }));
+
+// @license-end

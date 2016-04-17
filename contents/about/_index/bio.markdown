@@ -19,3 +19,9 @@ My other computer is a IBM (Lenovo) Thinkpad R40e. It runs Debian. Usually not u
 I only use free software except for my BIOS and my graphics card driver (the radeon driver needs to load propietary microcode).
 
 I’m also interested in electrical engineering and working with microcontrollers and embedded GNU/Linux devices (especially the Beaglebone Black)
+
+------
+
+Send complaints here: kzer-za (at) cryptolab (dot) net.
+
+If you want to send encrypted mail, use my public key: [https://sks-keyservers.net/pks/lookup?op=get&search=0x8D8D23075F93F925](https://sks-keyservers.net/pks/lookup?op=get&search=0x8D8D23075F93F925).

@@ -24,6 +24,7 @@ that it can run correctly.
 - jquery
 - cookie.js
 - jquery-watch
+- masonry js
 
 ## License
 

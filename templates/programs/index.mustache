@@ -1,19 +1,19 @@
 {{> header }}
 
-<div id="main" class="flow-text card">
+<div id="main">
 
     <style>
      #main {
-	 z-index: 999;
-	 background: rgba(24, 24, 24, 0.5);
-	 padding: 50px;
+	 width: 80vw !important;
+	 display: flex;
+	 flex-flow: center;
+     }
+     .navbar-fixed {
+	 height: 0;
      }
     </style>
-
-  {{{programs}}}
-
     
-    <div id="repositories" class="collection"></div>
+    <div id="repositories" class="grid"></div>
 
     <script src="/programs/getRepositories.js"></script>
     
