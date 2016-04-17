@@ -71,11 +71,11 @@ $(document).ready(function() {
 	//});
     //});
 
-    $(".bloginit").click(function() {
+    $(".bloginit *").click(function() {
 	if($("#blogside").css("width") === "0px") {
 	    $("#blogside, #main").addClass('actuated');
 	} else {
-	    $("#blogside, #main").addClass('actuated');
+	    $("#blogside, #main").removeClass('actuated');
 	}
     });
 
@@ -106,7 +106,6 @@ $(document).ready(function() {
 		    break;
 	    }
 	});
-    });
-    
+    });    
 });
 

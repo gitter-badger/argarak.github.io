@@ -65,7 +65,7 @@
 				transform="translate(-427.25969,-592.1152)"
 				id="layer1">
 				<g
-				    style="fill:none;stroke:#F44336;stroke-width:7.84223795;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+				    style="fill:none;stroke:#F4433;6stroke-width:7.84223795;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
 				    transform="matrix(0.36757387,0,0,0.36757387,270.7901,408.61183)"
 				    id="g4219">
 				    <path
@@ -150,4 +150,22 @@
 		</nav>
 	    </div>
     </div>
-    <div id="blogside">Hello there!</div>  
+    <div id="blogside">
+      {{#recent_posts}}
+      <article class="hentry">	
+      </article>
+      <div class="card grey darken-4 article">
+            <div class="card-content white-text">
+              <span class="card-title"><a href="{{ permalink }}/index.html">{{{ title }}}</a></span>
+              <p>{{{ content }}}</p>
+            </div>
+            <div class="card-action">
+              <!-- <time datetime="{{#iso_date}}{{ published_date }}{{/iso_date}}" pubdate><span> {{#long_date}}{{published_date}}{{/long_date}}</span></time> -->
+	      	{{#is_teaser}}
+	            <div><a href="{{ permalink }}" class="more">More »</a></div>
+	        {{/is_teaser}}
+            </div>
+      </div>
+      {{/recent_posts}}
+    </div>
+  

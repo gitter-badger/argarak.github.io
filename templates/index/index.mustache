@@ -1,6 +1,6 @@
 {{> header }}
 
-<div id="main" class="flow-text card grey darken-4">
+<div id="main">
 
     <style>
      canvas {
@@ -16,13 +16,31 @@
      }
     </style>
 
-    <script src="/index/pixi.min.js"></script>
-    <script src="/index/dist/pixi-particles.js"></script>
-    <script src="/index/background.js"></script>
-     <h2>{{title}}</h2> 
+    <!-- <script src="/index/pixi.min.js"></script>
+	 <script src="/index/dist/pixi-particles.js"></script> -->
+    <!-- <script src="/index/background.js"></script> -->
 
-  {{{index}}}
-  
+    <p id="timething"></p>
+    
+    <script>
+     var calltimeIndex = function(message) {
+	 $("#timething").text(message + ", and welcome to Argarak's Nexus!");
+     }
+     
+     var d = new Date();
+     var hrs = d.getHours();
+     
+     if(hrs >= 6 && hrs < 12) {
+	 calltimeIndex("Good Morning");
+     } else if(hrs >= 12 && hrs < 18) {
+	 calltimeIndex("Good Afternoon");
+     } else if(hrs >= 18 && hrs < 21) {
+	 calltimeIndex("Good Evening");
+     } else {
+	 calltimeIndex("Good Night");
+     }     
+    </script>
+    
 </div>
 
 {{> footer }}
