@@ -9,22 +9,40 @@
 	 left: 0;
 	 z-index: -999;
      }
+     #timething {
+	 font-family: "Raleway" !important;
+	 font-size: 3rem;
+	 color: white;
+	 z-index: 999;
+	 position: fixed;
+	 right: 20px;
+	 bottom: calc(50% - 3rem);
+	 width: 45vw;
+	 text-align: right;
+     }
      #main {
 	 z-index: 1;
 	 padding: 50px;
 	 margin-left: 90px;
      }
+     #overlay {
+	 position: absolute;
+	 z-index: 99;
+	 background: rgba(0,0,0,0.9);
+	 width: 100vw;
+	 height: 100vh;
+	 top: 0;
+     }
     </style>
 
-    <!-- <script src="/index/pixi.min.js"></script>
-	 <script src="/index/dist/pixi-particles.js"></script> -->
-    <!-- <script src="/index/background.js"></script> -->
+    <script src="/js/processing.min.js"></script>    
+    <canvas data-processing-sources="/index/Hex.pde /index/YAHG.pde"></canvas>
 
-    <p id="timething"></p>
+    <div id="timething"><noscript><i>Hello</i>, and welcome to <b>Argarak's Nexus!</b></noscript></div>
     
     <script>
      var calltimeIndex = function(message) {
-	 $("#timething").text(message + ", and welcome to Argarak's Nexus!");
+	 $("#timething").html("<i>" + message + "</i>, and welcome to <b>Argarak's Nexus!</b>");
      }
      
      var d = new Date();
@@ -42,5 +60,7 @@
     </script>
     
 </div>
+
+<div id="overlay"></div>
 
 {{> footer }}

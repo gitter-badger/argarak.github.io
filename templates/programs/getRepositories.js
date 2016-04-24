@@ -20,8 +20,11 @@ $.getJSON("https://api.github.com/users/argarak/repos", function(data) {
     }
     $('.grid').masonry({
 	gutter: 20,
-	itemSelector: '.grid-item',
-	fitWidth: true
+	itemSelector: '.grid-item'
+    });
+    $(".bloginit *").click(function(e) {
+
+	
     });
 });
 

@@ -25,6 +25,9 @@
     <script src="/js/materialize.min.js"></script>
     <!--<script src="/js/search.js"></script>-->
     <script src="/js/masonry.pkgd.min.js"></script>
+    <script src="/js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="/js/modernizr.js"></script>
+    <script src="/js/dynamicpage.js"></script>
     <script src="/js/highlight/highlight.pack.js"></script>
     <link href="/js/highlight/gruvbox-dark.css" rel="stylesheet">
     <script>
@@ -99,7 +102,7 @@
 		    </a>
 		</li>
 		<li id="nav-li">
-		    <a id="no" class="bloginit waves-effect waves-light" href="######################">
+		    <a id="no" class="bloginit waves-effect waves-light" href="#">
 			<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Blog">
 			    <path d="M28 34H8v4h20v-4zm12-16H8v4h32v-4zM8 30h32v-4H8v4zm0-20v4h32v-4H8z" fill="#9C27B0"/>
 			    <path d="M0 0h48v48H0z" fill="none"/>
@@ -136,8 +139,8 @@
 	    </ul>
 	</header>
 	<main>
-	    <noscript>
-	Hi! I see you have javascript disabled. Please enable it. This website does require javascript for some features. It's free, check here. (and yes LibreJS does say it's nonfree because it's "free" javascript detection is awful).
+	    <noscript class="nojs">
+	      You have javascript disabled which makes me sad. Please enable it. LibreJS users see <a href="#">here</a>.
 	    </noscript>
 	    <div class="navbar-fixed">
 		<nav id="top-nav">
@@ -151,6 +154,7 @@
 	    </div>
     </div>
     <div id="blogside">
+      <a id="closeSide" href="#"><i class="material-icons">close</i></a>
     </div>
   
 		<div class="flow-text" id="main" role="main">

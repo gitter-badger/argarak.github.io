@@ -16,7 +16,7 @@
 * {
     outline: 0 !important;
     color: #bbb;
-    font-family: "Raleway", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 main {
     margin-left: 90px;
@@ -231,7 +231,7 @@ time span {
     padding: 0 25px;
 }
 .grid {
-    margin: auto;
+    width: 90vw;
 }
 .grid .card {
     width: 300px;
@@ -260,10 +260,26 @@ li {
     overflow-y: auto;
 }
 #blogside.actuated {
+    direction: rtl;
     width: 40vw;
 }
-
+#blogside.actuated * {
+    direction: ltr;
+}
 #main.actuated {
     width: 40vw !important;
     margin-left: 120px !important;
+}
+#closeSide * {
+    font-size: 20px;
+    margin: 15px;
+}
+.nojs {
+    background: #bbb;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    width: 100vw;
+    color: black;
+    z-index: 999;
 }

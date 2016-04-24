@@ -71,9 +71,10 @@ $(document).ready(function() {
 	//});
     //});
 
-    $(".bloginit *").click(function() {
+    $(".bloginit *").click(function(e) {
+	e.preventDefault();
 	if($("#blogside").css("width") === "0px") {
-	    $("#blogside, #main").addClass('actuated');
+	    $("#blogside, #main, #repositories").addClass('actuated');
 	} else {
 	    $("#blogside, #main").removeClass('actuated');
 	}
@@ -106,6 +107,15 @@ $(document).ready(function() {
 		    break;
 	    }
 	});
-    });    
+    });
+    $("#closeSide").click(function(e) {
+       e.preventDefault();
+       $("#blogside").removeClass("actuated");
+       $("#main").removeClass("actuated");
+    });
+    $("#blogside").on("swipe", function() {
+       $("#blogside").removeClass("actuated");
+       $("#main").removeClass("actuated");
+    });
 });
 

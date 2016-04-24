@@ -139,8 +139,8 @@
 	    </ul>
 	</header>
 	<main>
-	    <noscript class="nojs">
-	      You have javascript disabled which makes me sad. Please enable it. LibreJS users see <a href="#">here</a>.
+	    <noscript>
+	Hi! I see you have javascript disabled. Please enable it. This website does require javascript for some features. It's free, check here. (and yes LibreJS does say it's nonfree because it's "free" javascript detection is awful).
 	    </noscript>
 	    <div class="navbar-fixed">
 		<nav id="top-nav">
@@ -157,21 +157,35 @@
       <a id="closeSide" href="#"><i class="material-icons">close</i></a>
     </div>
   
+		<div class="flow-text" id="main" role="main">
+		
+<div id="main-content" class="expanded">
+	<h2>Archive</h2> 
 
-<div id="main">
+		<h3>By Year</h3>
 
-    <style>
-     .navbar-fixed {
-	 height: 0;
-     }
-    </style>
-    
-    <div id="repositories" class="grid"></div>
+		<ul class="filters"> 
+				<li><a href="/1970" class="">1970</a></li>
+		</ul>
 
-    <script src="/programs/getRepositories.js"></script>
-    
+		<h3>By Tag</h3>
+		<ul class="filters">
+				<li><a href="/tag/life"  class="current">Life</a></li>
+				<li><a href="/tag/blog"  class="">Blog</a></li>
+				<li><a href="/tag/punch"  class="">Punch</a></li>
+		</ul>
+
+		<div class="posts" role="archive">
+			<ul>
+				<li>
+					<a id="post-link" href="&#x2F;1970&#x2F;01&#x2F;01&#x2F;lets-start">Let's Start!</a>
+					<time class="updated right-float" datetime="Thu Jan 01 1970 00:00:00 GMT+0000 (BST)" pubdate>01 January 1970</time>
+				</li>
+			</ul>
+		</div>
+
 </div>
-
+    		</div>
 <!-- Copyright 2016 Jakub Kukiełka -->
 
 <!-- Licensed under the Apache License, Version 2.0 (the "License"); -->

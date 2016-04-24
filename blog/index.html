@@ -25,6 +25,9 @@
     <script src="/js/materialize.min.js"></script>
     <!--<script src="/js/search.js"></script>-->
     <script src="/js/masonry.pkgd.min.js"></script>
+    <script src="/js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="/js/modernizr.js"></script>
+    <script src="/js/dynamicpage.js"></script>
     <script src="/js/highlight/highlight.pack.js"></script>
     <link href="/js/highlight/gruvbox-dark.css" rel="stylesheet">
     <script>
@@ -99,7 +102,7 @@
 		    </a>
 		</li>
 		<li id="nav-li">
-		    <a id="no" class="bloginit waves-effect waves-light" href="######################">
+		    <a id="no" class="bloginit waves-effect waves-light" href="#">
 			<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Blog">
 			    <path d="M28 34H8v4h20v-4zm12-16H8v4h32v-4zM8 30h32v-4H8v4zm0-20v4h32v-4H8z" fill="#9C27B0"/>
 			    <path d="M0 0h48v48H0z" fill="none"/>
@@ -136,8 +139,8 @@
 	    </ul>
 	</header>
 	<main>
-	    <noscript>
-	Hi! I see you have javascript disabled. Please enable it. This website does require javascript for some features. It's free, check here. (and yes LibreJS does say it's nonfree because it's "free" javascript detection is awful).
+	    <noscript class="nojs">
+	      You have javascript disabled which makes me sad. Please enable it. LibreJS users see <a href="#">here</a>.
 	    </noscript>
 	    <div class="navbar-fixed">
 		<nav id="top-nav">
@@ -151,6 +154,7 @@
 	    </div>
     </div>
     <div id="blogside">
+      <a id="closeSide" href="#"><i class="material-icons">close</i></a>
       <article class="hentry">	
       </article>
       <div class="card grey darken-4 article">
@@ -161,18 +165,6 @@
             <div class="card-action">
               <!-- <time datetime="1970-01-01T00:00:00.000Z" pubdate><span> 01 January 1970</span></time> -->
 	            <div><a href="&#x2F;1970&#x2F;01&#x2F;01&#x2F;lets-start" class="more">More »</a></div>
-            </div>
-      </div>
-      <article class="hentry">	
-      </article>
-      <div class="card grey darken-4 article">
-            <div class="card-content white-text">
-              <span class="card-title"><a href="&#x2F;1970&#x2F;01&#x2F;01&#x2F;aoeaoeaoea/index.html">Let's Start!</a></span>
-              <p><p>Thanks for trying out Punch blog. You start writing editing this post itself. Just go to <code>posts/</code> directory and you will find a file named <code>1970-01-01-lets-start.markdown</code>. Rename it with today&#39;s date and your post title. Then open it, delete this post and start writing your own.</p><p>Before we go any further, here&#39;s cute picture of a cat to cheer you up :)</p></p>
-            </div>
-            <div class="card-action">
-              <!-- <time datetime="1970-01-01T00:00:00.000Z" pubdate><span> 01 January 1970</span></time> -->
-	            <div><a href="&#x2F;1970&#x2F;01&#x2F;01&#x2F;aoeaoeaoea" class="more">More »</a></div>
             </div>
       </div>
     </div>
@@ -187,15 +179,6 @@
     </div>
     
     <div><a href="&#x2F;1970&#x2F;01&#x2F;01&#x2F;lets-start" class="more">More »</a></div>
-  </article>	
-  <article class="hentry">
-    <h2 class="entry-title"><a href="&#x2F;1970&#x2F;01&#x2F;01&#x2F;aoeaoeaoea/index.html">Let's Start!</a></h2>
-    <time class="updated right-float red dateback truncate blacktext" datetime="1970-01-01T00:00:00.000Z" pubdate><span> 01 January 1970</span></time>
-    <div class="entry-content">
-      <p>Thanks for trying out Punch blog. You start writing editing this post itself. Just go to <code>posts/</code> directory and you will find a file named <code>1970-01-01-lets-start.markdown</code>. Rename it with today&#39;s date and your post title. Then open it, delete this post and start writing your own.</p><p>Before we go any further, here&#39;s cute picture of a cat to cheer you up :)</p>
-    </div>
-    
-    <div><a href="&#x2F;1970&#x2F;01&#x2F;01&#x2F;aoeaoeaoea" class="more">More »</a></div>
   </article>	
 </div>
 
