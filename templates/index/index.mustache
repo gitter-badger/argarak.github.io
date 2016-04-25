@@ -17,7 +17,7 @@
 	 position: fixed;
 	 right: 20px;
 	 bottom: calc(50% - 3rem);
-	 width: 45vw;
+	 width: 40vw;
 	 text-align: right;
      }
      #main {
@@ -32,6 +32,44 @@
 	 width: 100vw;
 	 height: 100vh;
 	 top: 0;
+     }
+     #version {
+	 position: fixed;
+	 bottom: 0;
+	 z-index: 999;
+	 right: 0;
+	 color: #222;
+	 margin: 15px;
+     }
+     @media screen and (max-width: 1600px) {
+	 #timething {
+	     width: 45vw;
+	 }
+     }
+     @media screen and (max-width: 1420px) {
+	 #timething {
+	     width: 50vw;
+	 }
+     }
+     @media screen and (max-width: 1280px) {
+	 #timething {
+	     width: 60vw;
+	 }
+     }
+     @media screen and (max-width: 1065px) {
+	 #timething {
+	     width: 80vw;
+	 }
+     }
+     @media screen and (max-width: 993px) {
+	 #timething {
+	     width: 100vw;
+	 }
+     }
+     @media screen and (max-width: 500px) {
+	 #timething {
+	     word-wrap: break-word;
+	 }
      }
     </style>
 
@@ -62,5 +100,6 @@
 </div>
 
 <div id="overlay"></div>
+<div id="version">v2.1 - Horse Radish (PRERELEASE)</div>
 
 {{> footer }}

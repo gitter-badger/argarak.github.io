@@ -2,29 +2,33 @@ var fork = "<svg class=\"fork secondary-content\" aria-hidden=\"true\" class=\"o
 
 var card = ["<div class=\"grid-item card grey darken-4\"><div class=\"card-content white-text\"><span class=\"card-title\">", "</span><p>", "</p></div><div class=\"card-action\">", "</div>"]
 
-$.getJSON("https://api.github.com/users/argarak/repos", function(data) {
-    for(var i = 0; i < data.length; i++) {
-	if(data[i]["fork"]) {
-	    $("#repositories").append(
-		card[0] + "<a href=\"" + data[i]["html_url"] + "\" class=\"repo\">" +
-		data[i]["name"] + "</a>" + card[1] + data[i].description + card[2] +
-		fork + card[3]
-	    );
-	} else {
-	    $("#repositories").append(
-		card[0] + "<a href=\"" + data[i]["html_url"] + "\" class=\"repo\">" +
-		data[i]["name"] + "</a>" + card[1] + data[i].description + card[2] +
-		card[3]
-	    );
-	}    
-    }
-    $('.grid').masonry({
-	gutter: 20,
-	itemSelector: '.grid-item'
-    });
-    $(".bloginit *").click(function(e) {
+alert("Hello there!");
 
-	
-    });
+
+$(document).ready(function() {
+    $.getJSON("https://api.github.com/users/argarak/repos", function(data) {
+	for(var i = 0; i < data.length; i++) {
+	    if(data[i]["fork"]) {
+		$("#repositories").append(
+		    card[0] + "<a href=\"" + data[i]["html_url"] + "\" class=\"repo\">" +
+			data[i]["name"] + "</a>" + card[1] + data[i].description + card[2] +
+			fork + card[3]
+		);
+	    } else {
+		$("#repositories").append(
+		    card[0] + "<a href=\"" + data[i]["html_url"] + "\" class=\"repo\">" +
+			data[i]["name"] + "</a>" + card[1] + data[i].description + card[2] +
+			card[3]
+		);
+	    }    
+	}
+	$('.grid').masonry({
+	    gutter: 20,
+	    itemSelector: '.grid-item'
+	});
+	$(".bloginit *").click(function(e) {
+
+	    
+	});
+    }); 
 });
-

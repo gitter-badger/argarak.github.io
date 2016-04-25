@@ -1,9 +1,16 @@
+<style>
+ #nav-mobile {
+     background: rgba(0, 0, 0, 0) !important;
+ }
+</style> 
+
 <div id="main-content">
 	<article class="hentry"> 
-		<span id="title-container"><h2 class="entry-title"><span class="truncate red darken-4"> {{{ title }}}</span></h2>
-    <time class="updated" datetime="{{#iso_date}}{{ published_date }}{{/iso_date}}" pubdate><span class="red">{{#long_date}}{{published_date}}{{/long_date}} </span></time></span>
-
-		<div class="entry-content">
+	    <span id="title-container"><h2 class="entry-title"><b>{{{ title }}}</b></h2>
+		<hr>
+		<time class="updated" datetime="{{#iso_date}}{{ published_date }}{{/iso_date}}" pubdate><i>{{#long_date}}{{published_date}}{{/long_date}}</i></time></span>
+		<hr>
+                <div class="entry-content">
 			{{{content}}}
 		</div>
 	</article>

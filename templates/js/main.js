@@ -81,7 +81,7 @@ $(document).ready(function() {
     });
 
     // Tooltip colours
-    $("#no, #no svg").hover(function() {
+    $(".no, .no svg").hover(function() {
 	$(".material-tooltip").each(function(i) {
 	    switch(i) {
 		case 0:

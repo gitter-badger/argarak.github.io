@@ -23,7 +23,7 @@ int counter;
 Hex[] hexagons; 
  
 static final int X_HEXAGONS = 17; 
-static final int Y_HEXAGONS = 17; 
+static final int Y_HEXAGONS = 17;
 
 void setup() {
   hexagons = new Hex[X_HEXAGONS * Y_HEXAGONS];
