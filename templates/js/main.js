@@ -117,5 +117,47 @@ $(document).ready(function() {
        $("#blogside").removeClass("actuated");
        $("#main").removeClass("actuated");
     });
+
+    $('img').materialbox();
+
+    var filterByTag = function(tag) {
+	window.scrollTo(0, 0);
+	if(tag === "All") {
+	    $(".hentry").each(function() {
+		$(this).show();
+	    });
+	} else {
+	    $.getJSON("/blog/posts.json", function(posts) {
+		$.each(posts, function(i) {
+		    var currTag = posts[i]["tags"][0];
+		    console.log(currTag, tag);
+		    if(currTag == tag) {
+			$(".entry-title a").each(function() {
+			    console.log($(this).html(), posts[i]["title"]);
+			    if(posts[i]["title"] === $(this).html()) {
+				var article = $(this).parents()[1];
+				$(article).show();
+			    }
+			});
+		    } else {
+			$(".entry-title a").each(function() {
+			    console.log($(this).html(), posts[i]["title"]);
+			    if(posts[i]["title"] === $(this).html()) {
+				var article = $(this).parents()[1];
+				$(article).hide();
+			    }
+			});
+		    }
+		});
+	    });
+	}
+    }
+    
+    $(".tag").click(function() {
+	var label = $(this).html();
+	$("li.active").removeClass("active");
+	$(this).parent().addClass("active");
+	filterByTag($(this).html());
+    });
 });
 

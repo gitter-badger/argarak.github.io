@@ -2,9 +2,6 @@ var fork = "<svg class=\"fork secondary-content\" aria-hidden=\"true\" class=\"o
 
 var card = ["<div class=\"grid-item card grey darken-4\"><div class=\"card-content white-text\"><span class=\"card-title\">", "</span><p>", "</p></div><div class=\"card-action\">", "</div>"]
 
-alert("Hello there!");
-
-
 $(document).ready(function() {
     $.getJSON("https://api.github.com/users/argarak/repos", function(data) {
 	for(var i = 0; i < data.length; i++) {

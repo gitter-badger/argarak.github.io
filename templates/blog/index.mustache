@@ -1,19 +1,36 @@
 {{> header }}
 
+<div class="result"></div>
+
 <div id="main" class="posts flow-text">
-  {{#recent_posts}}
-  <article class="hentry">
-    <h2 class="entry-title"><a href="{{ permalink }}/index.html">{{{ title }}}</a></h2>
-    <time class="updated right-float red dateback truncate blacktext" datetime="{{#iso_date}}{{ published_date }}{{/iso_date}}" pubdate><span> {{#long_date}}{{published_date}}{{/long_date}}</span></time>
-    <div class="entry-content">
-      {{{ content }}}
+    <div id="pageback">
+	<ul class="pagination">
+	    <li class="disabled"><i class="material-icons">chevron_left</i> </li>
+	    <li class="active waves-effect begin"><a class="tag" href="#!">All</a> </li>
+	    <li class="disabled"><i class="material-icons">chevron_right</i></li>
+	</ul>
+
+	<script>
+	 $.getJSON("/blog/tags.json", function(tags) {
+	     $.each(tags, function(key) {
+		 $(".begin").after("<li class=\"waves-effect\"><a class=\"tag\" href=\"#!\">" + key +"</a></li>");
+	     });
+	 });
+	</script>
     </div>
-    
+	{{#recent_posts}}
+	    <article class="hentry">
+		<h2 class="entry-title"><a href="{{ permalink }}/index.html">{{{ title }}}</a></h2>
+		<hr>
+		<div class="entry-content">
+      {{{ content }}}
+		</div>
+		
     {{#is_teaser}}
-    <div><a href="{{ permalink }}" class="more">More »</a></div>
+	<div><a href="{{ permalink }}" class="more">More »</a></div>
     {{/is_teaser}}
-  </article>	
-  {{/recent_posts}}
+	    </article>	
+	{{/recent_posts}}
 </div>
 
 {{> footer }}

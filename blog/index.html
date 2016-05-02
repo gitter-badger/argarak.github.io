@@ -19,7 +19,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
     <script src="/js/js.cookie.js"></script>
     <script src="/js/jquery-2.2.2.min.js"></script>
-    <!--<script src="/js/ajaxLoader.js"></script>-->
     <script src="/js/jquery-watch.min.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/materialize.min.js"></script>
@@ -27,7 +26,7 @@
     <script src="/js/masonry.pkgd.min.js"></script>
     <script src="/js/jquery.mobile-1.4.5.min.js"></script>
     <script src="/js/modernizr.js"></script>
-    <script src="/js/dynamicpage.js"></script>
+    <!-- <script src="/js/dynamicpage.js"></script> -->
     <script src="/js/highlight/highlight.pack.js"></script>
     <link href="/js/highlight/gruvbox-dark.css" rel="stylesheet">
     <script>
@@ -159,27 +158,86 @@
       </article>
       <div class="card grey darken-4 article">
             <div class="card-content white-text">
-              <span class="card-title"><a href="&#x2F;1970&#x2F;01&#x2F;01&#x2F;lets-start/index.html">Let's Start!</a></span>
-              <p><p>Thanks for trying out Punch blog. You start writing editing this post itself. Just go to <code>posts/</code> directory and you will find a file named <code>1970-01-01-lets-start.markdown</code>. Rename it with today&#39;s date and your post title. Then open it, delete this post and start writing your own.</p><p>Before we go any further, here&#39;s cute picture of a cat to cheer you up :)</p></p>
+              <span class="card-title"><a href="&#x2F;2016&#x2F;04&#x2F;29&#x2F;nexus-evolution/index.html">The Evolution of Argarak's Nexus</a></span>
+              <p><p>Argarak&#39;s Nexus has has drastically evolved in a short period of time (approximately one year). Let&#39;s take a look back at what Argarak&#39;s Nexus was.</p><p>I took the name Argarak as an alias because it is a ship captain name of the Ilwrath species in the game Star Control 2, which is one of my favourite games of all time. (Though Heroes of Might and Magic III is the best)</p></p>
             </div>
             <div class="card-action">
-              <!-- <time datetime="1970-01-01T00:00:00.000Z" pubdate><span> 01 January 1970</span></time> -->
-	            <div><a href="&#x2F;1970&#x2F;01&#x2F;01&#x2F;lets-start" class="more">More »</a></div>
+              <!-- <time datetime="2016-04-28T23:00:00.000Z" pubdate><span> 29 April 2016</span></time> -->
+	            <div><a href="&#x2F;2016&#x2F;04&#x2F;29&#x2F;nexus-evolution" class="more">More »</a></div>
+            </div>
+      </div>
+      <article class="hentry">	
+      </article>
+      <div class="card grey darken-4 article">
+            <div class="card-content white-text">
+              <span class="card-title"><a href="&#x2F;2016&#x2F;04&#x2F;29&#x2F;nexus-evolaoe/index.html">The Evolution of Argarak's Nexusa</a></span>
+              <p><p>Argarak&#39;s Nexus has has drastically evolved in a short period of time (approximately one year). Let&#39;s take a look back at what Argarak&#39;s Nexus was.</p><p>I took the name Argarak as an alias because it is a ship captain name of the Ilwrath species in the game Star Control 2, which is one of my favourite games of all time. (Though Heroes of Might and Magic III is the best)</p></p>
+            </div>
+            <div class="card-action">
+              <!-- <time datetime="2016-04-28T23:00:00.000Z" pubdate><span> 29 April 2016</span></time> -->
+	            <div><a href="&#x2F;2016&#x2F;04&#x2F;29&#x2F;nexus-evolaoe" class="more">More »</a></div>
+            </div>
+      </div>
+      <article class="hentry">	
+      </article>
+      <div class="card grey darken-4 article">
+            <div class="card-content white-text">
+              <span class="card-title"><a href="&#x2F;2016&#x2F;04&#x2F;29&#x2F;nexus-evolaoe/index.html">The Evolution of Argarak's Nexusa</a></span>
+              <p><p>Argarak&#39;s Nexus has has drastically evolved in a short period of time (approximately one year). Let&#39;s take a look back at what Argarak&#39;s Nexus was.</p><p>I took the name Argarak as an alias because it is a ship captain name of the Ilwrath species in the game Star Control 2, which is one of my favourite games of all time. (Though Heroes of Might and Magic III is the best)</p></p>
+            </div>
+            <div class="card-action">
+              <!-- <time datetime="2016-04-28T23:00:00.000Z" pubdate><span> 29 April 2016</span></time> -->
+	            <div><a href="&#x2F;2016&#x2F;04&#x2F;29&#x2F;nexus-evolaoe" class="more">More »</a></div>
             </div>
       </div>
     </div>
   
 
+<div class="result"></div>
+
 <div id="main" class="posts flow-text">
-  <article class="hentry">
-    <h2 class="entry-title"><a href="&#x2F;1970&#x2F;01&#x2F;01&#x2F;lets-start/index.html">Let's Start!</a></h2>
-    <time class="updated right-float red dateback truncate blacktext" datetime="1970-01-01T00:00:00.000Z" pubdate><span> 01 January 1970</span></time>
-    <div class="entry-content">
-      <p>Thanks for trying out Punch blog. You start writing editing this post itself. Just go to <code>posts/</code> directory and you will find a file named <code>1970-01-01-lets-start.markdown</code>. Rename it with today&#39;s date and your post title. Then open it, delete this post and start writing your own.</p><p>Before we go any further, here&#39;s cute picture of a cat to cheer you up :)</p>
+    <div id="pageback">
+	<ul class="pagination">
+	    <li class="disabled"><i class="material-icons">chevron_left</i> </li>
+	    <li class="active waves-effect begin"><a class="tag" href="#!">All</a> </li>
+	    <li class="disabled"><i class="material-icons">chevron_right</i></li>
+	</ul>
+
+	<script>
+	 $.getJSON("/blog/tags.json", function(tags) {
+	     $.each(tags, function(key) {
+		 $(".begin").after("<li class=\"waves-effect\"><a class=\"tag\" href=\"#!\">" + key +"</a></li>");
+	     });
+	 });
+	</script>
     </div>
-    
-    <div><a href="&#x2F;1970&#x2F;01&#x2F;01&#x2F;lets-start" class="more">More »</a></div>
-  </article>	
+	    <article class="hentry">
+		<h2 class="entry-title"><a href="&#x2F;2016&#x2F;04&#x2F;29&#x2F;nexus-evolution/index.html">The Evolution of Argarak's Nexus</a></h2>
+		<hr>
+		<div class="entry-content">
+      <p>Argarak&#39;s Nexus has has drastically evolved in a short period of time (approximately one year). Let&#39;s take a look back at what Argarak&#39;s Nexus was.</p><p>I took the name Argarak as an alias because it is a ship captain name of the Ilwrath species in the game Star Control 2, which is one of my favourite games of all time. (Though Heroes of Might and Magic III is the best)</p>
+		</div>
+		
+	<div><a href="&#x2F;2016&#x2F;04&#x2F;29&#x2F;nexus-evolution" class="more">More »</a></div>
+	    </article>	
+	    <article class="hentry">
+		<h2 class="entry-title"><a href="&#x2F;2016&#x2F;04&#x2F;29&#x2F;nexus-evolaoe/index.html">The Evolution of Argarak's Nexusa</a></h2>
+		<hr>
+		<div class="entry-content">
+      <p>Argarak&#39;s Nexus has has drastically evolved in a short period of time (approximately one year). Let&#39;s take a look back at what Argarak&#39;s Nexus was.</p><p>I took the name Argarak as an alias because it is a ship captain name of the Ilwrath species in the game Star Control 2, which is one of my favourite games of all time. (Though Heroes of Might and Magic III is the best)</p>
+		</div>
+		
+	<div><a href="&#x2F;2016&#x2F;04&#x2F;29&#x2F;nexus-evolaoe" class="more">More »</a></div>
+	    </article>	
+	    <article class="hentry">
+		<h2 class="entry-title"><a href="&#x2F;2016&#x2F;04&#x2F;29&#x2F;nexus-evolaoe/index.html">The Evolution of Argarak's Nexusa</a></h2>
+		<hr>
+		<div class="entry-content">
+      <p>Argarak&#39;s Nexus has has drastically evolved in a short period of time (approximately one year). Let&#39;s take a look back at what Argarak&#39;s Nexus was.</p><p>I took the name Argarak as an alias because it is a ship captain name of the Ilwrath species in the game Star Control 2, which is one of my favourite games of all time. (Though Heroes of Might and Magic III is the best)</p>
+		</div>
+		
+	<div><a href="&#x2F;2016&#x2F;04&#x2F;29&#x2F;nexus-evolaoe" class="more">More »</a></div>
+	    </article>	
 </div>
 
 <!-- Copyright 2016 Jakub Kukiełka -->
