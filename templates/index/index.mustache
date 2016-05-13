@@ -1,6 +1,6 @@
 {{> header }}
 
-<div id="main" class="flow-text card">
+<div id="main">
 
     <style>
      canvas {
@@ -9,24 +9,111 @@
 	 left: 0;
 	 z-index: -999;
      }
-     #top {
-	 background: transparent linear-gradient(to bottom, #100 8%, rgba(20, 0, 0, 0.86) 21%, rgba(125, 185, 232, 0) 100%) repeat scroll 0% 0% !important;
-	 z-index: 9999;
+     #timething {
+	 font-family: "Raleway" !important;
+	 font-size: 3rem;
+	 color: white;
+	 z-index: 333;
+	 position: fixed;
+	 right: 20px;
+	 bottom: calc(50% - 3rem);
+	 width: 40vw;
+	 text-align: right;
      }
      #main {
-	 z-index: 999;
-	 background: rgba(24, 24, 24, 0.5);
+	 z-index: 1;
 	 padding: 50px;
+	 margin-left: 90px;
+     }
+     #overlay {
+	 position: absolute;
+	 z-index: 99;
+	 background: rgba(0,0,0,0.9);
+	 width: 100vw;
+	 height: 100vh;
+	 top: 0;
+     }
+     #version {
+	 position: fixed;
+	 bottom: 0;
+	 z-index: 999;
+	 right: 0;
+	 color: #222;
+	 margin: 15px;
+     }
+     @media screen and (max-width: 1600px) {
+	 #timething {
+	     width: 45vw;
+	 }
+     }
+     @media screen and (max-width: 1420px) {
+	 #timething {
+	     width: 50vw;
+	 }
+     }
+     @media screen and (max-width: 1280px) {
+	 #timething {
+	     width: 60vw;
+	 }
+     }
+     @media screen and (max-width: 1065px) {
+	 #timething {
+	     font-size: 2.7rem;
+	     width: 80vw;
+	 }
+     }
+     @media screen and (max-width: 993px) {
+	 #timething {
+	     font-size: 4vw;
+	     top: 0;
+	     width: 100vw;
+	     height: 10vh;
+	 }
+     }
+     @media screen and (max-width: 560px) {
+	 #timething {
+	     font-size: 6vw;
+	 }
+     }
+     @media screen and (max-width: 500px) {
+	 #timething {
+	     word-wrap: break-word;
+	 }
+     }
+     @media screen and (max-width: 400px) {
+	 #timething {
+	     font-size: 7vw;
+	 }
      }
     </style>
 
-    <script src="/index/pixi.min.js"></script>
-    <script src="/index/dist/pixi-particles.js"></script>
-    <script src="/index/background.js"></script>
-     <h2>{{title}}</h2> 
+    <script src="/js/processing.min.js"></script>    
+    <canvas data-processing-sources="/index/Hex.pde /index/YAHG.pde"></canvas>
 
-  {{{index}}}
-  
+    <div id="timething"><noscript><i>Hello</i>, and welcome to <b>Argarak's Nexus!</b></noscript></div>
+    
+    <script>
+     var calltimeIndex = function(message) {
+	 $("#timething").html("<i>" + message + "</i>, and welcome to <b>Argarak's Nexus!</b>");
+     }
+     
+     var d = new Date();
+     var hrs = d.getHours();
+     
+     if(hrs >= 6 && hrs < 12) {
+	 calltimeIndex("Good Morning");
+     } else if(hrs >= 12 && hrs < 18) {
+	 calltimeIndex("Good Afternoon");
+     } else if(hrs >= 18 && hrs < 21) {
+	 calltimeIndex("Good Evening");
+     } else {
+	 calltimeIndex("Good Night");
+     }     
+    </script>
+    
 </div>
+
+<div id="overlay"></div>
+<div id="version">v2.1 - Horse Radish (PRERELEASE)</div>
 
 {{> footer }}

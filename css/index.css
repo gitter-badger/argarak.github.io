@@ -16,44 +16,37 @@
 * {
     outline: 0 !important;
     color: #bbb;
-    font-family: "Raleway", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 main {
     margin-left: 90px;
 }
-
 #main {
+    transition: all ease .5s;
     margin: auto !important;
     width: 70vw !important;
 }
 img {
     padding: 5px !important;
     border: 15px solid #2c2c2c !important;
+    filter: brightness(0.4);
 }
 .side-nav {
     display: inline-flex;
     padding: 21px !important;
     width: 90px !important;
-    background: rgba(0, 0, 0, 0) !important;
+    background: #000 !important;
     flex-direction: column;
     justify-content: center;
 }
-#top {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#111111+21,7db9e8+100&1+8,0+100 */
-    background: -moz-linear-gradient(top, rgba(17,17,17,1) 8%, rgba(17,17,17,0.86) 21%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(17,17,17,1) 8%,rgba(17,17,17,0.86) 21%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(17,17,17,1) 8%,rgba(17,17,17,0.86) 21%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#111111', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
-    height: 120px;
-    z-index: -999;
-    margin-bottom: -50px !important;
-}
 #top-nav {
     display: flex;
+    position: fixed;
     flex-direction: row;
     justify-content: flex-end;
     background: rgba(0, 0, 0, 0) !important;
-    margin-left: -110px !important;
+    right: 0;
+    height: 0px !important;
 }
 .search-icon {
   -webkit-transition: all 0.5s ease-in-out;
@@ -79,12 +72,12 @@ img {
 #title {
     margin-left: -90px;
 }
-#nav-li {
-    width: 0px !important;
+.nav-li {
     height: 80px !important;
     padding: 0 !important;
+    list-style-type: none !important;
 }
-#no {
+.no {
     padding: 0 !important;
     margin: 0 !important;
 }
@@ -92,7 +85,7 @@ li:hover {
     background: rgba(0, 0, 0, 0) !important;
 }
 body {
-  background: #1a1a1a;
+  background: #111;
 }
 code * {
     font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif !important;
@@ -151,6 +144,7 @@ license {
     font-size: 12px;
     bottom: 0;
     background: #000;
+    z-index: 9999;
 }
 license i {
     font-size: 15px !important;
@@ -160,7 +154,7 @@ license i {
 a {
     color: red !important;
 }
-a#no {
+a.no {
     display: inline-block;
 }
 
@@ -168,72 +162,49 @@ a#no {
     z-index: 999;
 }
 
-/* .side-nav li a:hover span { */
-/*     transition: opacity .5s cubic-bezier(0,1,.72,.97), width .5s cubic-bezier(0,1,.72,.97); */
-/*     opacity: 1; */
-/*     width: 200px; */
-/* } */
-
-/* /\* repeated colors from 1 to 10 each hover color repeated after 10 menu items *\/ */
-/* .side-nav li:nth-child(10n+1) span, .side-nav li:nth-child(10n+1) a:hover svg { */
-/*   background-color: #8350DD; */
-/* } */
-/* .side-nav li:nth-child(10n+2) span, .side-nav li:nth-child(10n+2) a:hover svg { */
-/*   background-color: #4EC5DB; */
-/* } */
-/* .side-nav li:nth-child(10n+3) span, .side-nav li:nth-child(10n+3) a:hover svg { */
-/*   background-color: #3DC25D; */
-/* } */
-/* .side-nav li:nth-child(10n+4) span, .side-nav li:nth-child(10n+4) a:hover svg { */
-/*   background-color: #99BE24; */
-/* } */
-/* .side-nav li:nth-child(10n+5) span, .side-nav li:nth-child(10n+5) a:hover svg { */
-/*   background-color: #38c; */
-/* } */
-/* .side-nav li:nth-child(10n+6) span, .side-nav li:nth-child(10n+6) a:hover svg { */
-/*   background-color: #ff0000; */
-/* } */
-/* .side-nav li:nth-child(10n+7) span, .side-nav li:nth-child(10n+7) a:hover svg { */
-/*   background-color: #000; */
-/* } */
-/* .side-nav li:nth-child(10n+8) span, .side-nav li:nth-child(10n+8) a:hover svg { */
-/*   background-color: #F1A111; */
-/* } */
-/* .side-nav li:nth-child(10n+9) span, .side-nav li:nth-child(10n+9) a:hover svg { */
-/*   background-color: #777; */
-/* } */
-/* .side-nav li:nth-child(10n+10) span, .side-nav li:nth-child(10n+10) a:hover svg { */
-/*   background-color: #30555C; */
-/* 				     } */
-
+.side-nav li a:hover span {
+    transition: opacity .5s cubic-bezier(0,1,.72,.97), width .5s cubic-bezier(0,1,.72,.97);
+    opacity: 1;
+    width: 200px;
+}
 .entry-title span, time span, blacktext * {
     color: black;
 }
-
-.entry-title span {
-    margin: 0 10px -10px 10px;
-    padding: 10px 0;
-    padding-right: 15vw;
+#datespan {
+    font-size: 15px;
+    color: #444 !important;
+    /* box-shadow: 30px 0px 0px rgb(183, 28, 28), */
+    /*             60px 0px 0px rgb(153, 28, 28), */
+    /*             90px 0px 0px rgb(133, 28, 28), */
+    /* 		120px 0px 0px rgb(113, 28, 28), */
+    /* 		150px 0px 0px rgb(93, 28, 28), */
+    /* 		180px 0px 0px rgb(73, 28, 28), */
+    /* 		210px 0px 0px rgb(53, 28, 28), */
+    /* 		240px 0px 0px rgb(43, 28, 28); */
 }
-
-time span {
-    margin: 0 10px;
-    padding: 10px 0;
-    margin-left: -5vw;
-    padding-left: 5vw;
-}
-
-.dateback {
-    margin: 0 5px;
-    padding: 5px 0;
-    margin-right: -5vw;
-    padding-right: 5vw;
-}
-
 .right-float {
     float: right !important;
 }
-
+.entry-title {
+    /* box-shadow: 30px 0px 0px rgb(0, 0, 0), */
+    /*             60px 0px 0px rgb(2, 2, 2), */
+    /*             90px 0px 0px rgb(4, 4, 4), */
+    /* 		120px 0px 0px rgb(6, 6, 6), */
+    /* 		150px 0px 0px rgb(8, 8, 8), */
+    /* 		180px 0px 0px rgb(10, 10, 10), */
+    /* 		210px 0px 0px rgb(12, 12, 12), */
+    /* 		240px 0px 0px rgb(14, 14, 14), */
+    /* 		270px 0px 0px rgb(16, 16, 16), */
+    /* 		-100px 0px 0px rgb(0, 0, 0), */
+    /* 		-200px 0px 0px rgb(0, 0, 0), */
+    /* 		-300px 0px 0px rgb(0, 0, 0), */
+    /*             -400px 0px 0px rgb(0, 0, 0); */
+    z-index: 999;
+    margin-bottom: 0px;
+}
+.entry-title * {
+    color: white !important;
+}
 .btn-floating {
     margin-top: 20px;
 }
@@ -254,9 +225,119 @@ time span {
     text-align: right;
     color: #BBB;
 }
-.repo:hover {
-    background: #111 !important;
+#main.actuated {
+    color: red !important;
 }
-.repo {
-    background: #1c1c1c !important;
+#btn-back {
+    display: flex;
+    flex-direction: column;
+    width: 82px !important;
+    margin-top: 95px !important;
+}
+#btn-back a {
+    margin: auto !important;
+}
+#search-icon {
+    padding: 0 25px;
+}
+.grid {
+    width: 80vw;
+}
+.grid .card {
+    width: 300px;
+}
+.article {
+    width: 35vw;
+    margin: 50px auto !important;
+}
+.fork {
+    margin-bottom: 15px;
+}
+li {
+    list-style-type: disc !important;
+    color: #bbb;
+    line-height: 45px;
+}
+#blogside {
+    transition: all ease .5s;
+    position: fixed;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    width: 0vw;
+    background: #222;
+    z-index: 9999;
+    overflow-y: auto;
+}
+#blogside.actuated {
+    direction: rtl;
+    width: 40vw;
+}
+#blogside.actuated * {
+    direction: ltr;
+}
+#main.actuated {
+    width: 40vw !important;
+    margin-left: 120px !important;
+}
+#closeSide * {
+    font-size: 20px;
+    margin: 15px;
+}
+.nojs {
+    background: #bbb;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    width: 100vw;
+    color: black;
+    z-index: 999;
+}
+#title-container {
+    display: inline-block;
+}
+.pagination {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.pagination li.active {
+    background-color: #222 !important;
+}
+#pageback {
+    position: fixed;
+    width: 100vw;
+    height: inherit;
+    left: 90px;
+    top: 0;
+    background: #000;
+}
+#sidebar {
+    position: fixed;
+    top: 0; bottom: 0; right: 0;
+    width: 30vw;
+    background: #000;
+    overflow-y: auto;
+    direction: rtl;
+}
+#sidebar * {
+    direction: ltr;
+}
+.initialized.active {
+    margin: auto;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    position: fixed !important;
+    filter: brightness(1);
+}
+.navbar-fixed {
+    width: 0 !important;
+}
+.result {
+    display: none;
+}
+#bottomspace {
+    width: 100%;
+    height: 1000px;
 }

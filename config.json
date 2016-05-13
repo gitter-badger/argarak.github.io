@@ -1,41 +1,49 @@
 {
-	"template_dir": "templates", 
-	"content_dir": "contents",
-	"output_dir": ".",
+    "template_dir": "templates", 
+    "content_dir": "contents",
+    "output_dir": ".",
 
-	"server": { 
-		"port": 9009
-	},
+    "server": { 
+	"port": 9009
+    },
 
-	"generator": {
-		"skip_paths": ["/css/less/*"]
-	},
+    "generator": {
+	"skip_paths": ["/css/less/*"]
+    },
 
-	"blog": {
-		"posts_dir": "posts",
-		"post_format": "markdown",	
-		"post_url": "/{year}/{month}/{date}/{title}",
-		"teaser_length": 2,
-		"homepage_posts": 1000,
+    "blog": {
+	"posts_dir": "posts",
+	"post_format": "markdown",	
+	"post_url": "/{year}/{month}/{date}/{title}",
+	"teaser_length": 2,
+	"homepage_posts": 1000,
 
-		"archive_urls": {
-			"all": "/archive",
-			"year": "/{year}",
-			"year_month": "/{year}/{month}",
-			"year_month_date": "/{year}/{month}/{date}",
-			"tag": "/tag/{tag}"
-		}
-	},
-
-        "plugins": {
-		"content_handler": "punch-blog-content-handler",
-
-		"helpers": {
-			"formatted_date": "./helpers/formatted_date_helper.js",	
-			"archive_helper": "./helpers/archive_helper.js",
-			"index_helper": "./helpers/index_helper.js",
-			"feed_helper": "./helpers/feed_helper.js",
-			"current_helper": "punch-current-page-helper"
-		}
+	"archive_urls": {
+	    "all": "/archive",
+	    "year": "/{year}",
+	    "year_month": "/{year}/{month}",
+	    "year_month_date": "/{year}/{month}/{date}",
+	    "tag": "/tag/{tag}"
 	}
+    },
+
+    "plugins": {
+	"content_handler": "punch-blog-content-handler",
+
+	"generator_hooks": {
+            "sitemap_generator": "punch-sitemap-generator"
+	},
+	
+	"helpers": {
+	    "formatted_date": "./helpers/formatted_date_helper.js",	
+	    "archive_helper": "./helpers/archive_helper.js",
+	    "index_helper": "./helpers/index_helper.js",
+	    "feed_helper": "./helpers/feed_helper.js",
+	    "current_helper": "punch-current-page-helper"
+	}
+    },
+
+    "sitemap_generator": {
+	"url_root": "https://argarak.github.io"    
+    }
 }
