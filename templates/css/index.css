@@ -337,3 +337,7 @@ li {
 .result {
     display: none;
 }
+#bottomspace {
+    width: 100%;
+    height: 1000px;
+}

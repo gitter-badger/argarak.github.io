@@ -1,5 +1,5 @@
 /**
- *
+ * Yes, I actually tried to get libre.js to work with my website 
  * @source: http://www.argarak.github.io/js/main.js
  *
  * @licstart  The following is the entire license notice for the 
@@ -44,7 +44,8 @@ $(document).ready(function() {
 
     // some element to monitor
     var nav = $("#nav-mobile");
-    
+
+    // I don't remember what this was for, I might remove it later
     // hook up the watcher
     nav.watch({
 	// specify CSS styles or attribute names to monitor

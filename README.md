@@ -12,13 +12,15 @@ and then put this directory onto your server.
 If you want to re-generate the site run `npm install` then `sudo npm install -g punch`
 to install punch globally and then run `punch g` inside the website directory.
 
+For testing run `punch s` to run punch's server.
+
 Note when generating: copy index/index.html to the directory of the server so 
 that it can run correctly.
 
 ## Libraries used
 
-- Materialize CSS
-- pixi.js
+- Materialize CSS (and js)
+- processing.js
 - punch (punch-blog)
 - highlight.js
 - jquery

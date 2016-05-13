@@ -1,27 +1,26 @@
 <div id="main-content" class="expanded">
-	<h2>Archive</h2> 
+    <h2>Archive</h2>
+    <hr>
 
-		<h3>By Year</h3>
-
+		<h4>By Year</h4>
 		<ul class="filters"> 
 			{{#years}}
 				<li><a href="/{{.}}" class="{{#current}}{{.}}{{/current}}">{{.}}</a></li>
 			{{/years}}
 		</ul>
-
-		<h3>By Tag</h3>
+		<hr>
+		<h4>By Tag</h4>
 		<ul class="filters">
 			{{#top_tags}}
 				<li><a href="/tag/{{#downcase}}{{.}}{{/downcase}}"  class="{{#current}}/tag/{{#downcase}}{{.}}{{/downcase}}{{/current}}">{{.}}</a></li>
 			{{/top_tags}}
 		</ul>
-
+		<hr>
 		<div class="posts" role="archive">
 			<ul>
 				{{#posts}}
 				<li>
-					<a id="post-link" href="{{ permalink }}">{{{ title }}}</a>
-					<time class="updated right-float" datetime="{{ published_date }}" pubdate>{{#long_date}}{{published_date}}{{/long_date}}</time>
+					<a id="post-link" href="{{ permalink }}">{{{ title }}}</a>					
 				</li>
 				{{/posts}}
 			</ul>

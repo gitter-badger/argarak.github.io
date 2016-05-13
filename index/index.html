@@ -25,7 +25,7 @@
     <!--<script src="/js/search.js"></script>-->
     <script src="/js/masonry.pkgd.min.js"></script>
     <script src="/js/jquery.mobile-1.4.5.min.js"></script>
-    <script src="/js/modernizr.js"></script>
+    <!-- <script src="/js/modernizr.js"></script> -->
     <!-- <script src="/js/dynamicpage.js"></script> -->
     <script src="/js/highlight/highlight.pack.js"></script>
     <link href="/js/highlight/gruvbox-dark.css" rel="stylesheet">
@@ -170,7 +170,7 @@
 	 font-family: "Raleway" !important;
 	 font-size: 3rem;
 	 color: white;
-	 z-index: 999;
+	 z-index: 333;
 	 position: fixed;
 	 right: 20px;
 	 bottom: calc(50% - 3rem);
@@ -215,17 +215,31 @@
      }
      @media screen and (max-width: 1065px) {
 	 #timething {
+	     font-size: 2.7rem;
 	     width: 80vw;
 	 }
      }
      @media screen and (max-width: 993px) {
 	 #timething {
+	     font-size: 4vw;
+	     top: 0;
 	     width: 100vw;
+	     height: 10vh;
+	 }
+     }
+     @media screen and (max-width: 560px) {
+	 #timething {
+	     font-size: 6vw;
 	 }
      }
      @media screen and (max-width: 500px) {
 	 #timething {
 	     word-wrap: break-word;
+	 }
+     }
+     @media screen and (max-width: 400px) {
+	 #timething {
+	     font-size: 7vw;
 	 }
      }
     </style>

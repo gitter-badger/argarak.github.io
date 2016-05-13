@@ -14,6 +14,9 @@
 
 
 @media screen and (max-width: 993px) {
+    #pageback {
+	left: 0 !important;
+    }
     #top-nav {
 	margin-left: 0px;
     }
@@ -42,10 +45,21 @@
 }
 
 @media screen and (max-width: 560px) {
-    #title {
-	display: none;
+    #btn-back {
+	width: auto !important;
+	margin-top: 0 !important;
     }
-}
-@media screen and (max-width: 480px) {
-    /*move side buttons to top/bottom*/
+    #top-nav {
+	bottom: 0;
+	width: 100vw;
+	background: #000 !important;
+	height: auto !important;
+	z-index: 99999;
+    }
+    #version {
+	z-index: 1 !important;
+    }
+    #main {
+	margin-bottom: 100px !important;
+    }
 }
