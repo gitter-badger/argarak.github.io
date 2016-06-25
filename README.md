@@ -1,6 +1,8 @@
 # Argarak's Nexus
 ## Based on punch-blog
 
+[![Join the chat at https://gitter.im/argarak/argarak.github.io](https://badges.gitter.im/argarak/argarak.github.io.svg)](https://gitter.im/argarak/argarak.github.io?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Installing
 
 If you, for some reason, want to run this website on your server run
